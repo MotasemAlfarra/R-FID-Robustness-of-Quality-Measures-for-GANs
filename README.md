@@ -9,6 +9,17 @@ Preprint: https://arxiv.org/pdf/2201.13019.pdf
 
 ![plot](./pull.png)
 
+If you find our work useful, please cite it appropriately as:
+
+```
+@article{alfarra2022robustness,
+  title={On the Robustness of Quality Measures for GANs},
+  author={Alfarra, Motasem and P{\'e}rez, Juan C and Fr{\"u}hst{\"u}ck, Anna and Torr, Philip HS and Wonka, Peter and Ghanem, Bernard},
+  journal={arXiv preprint arXiv:2201.13019},
+  year={2022}
+}
+```
+
 # Environment Installation
 
 To reproduce the experiments of our paper, first you need to install the environment through running the following line.
