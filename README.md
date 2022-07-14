@@ -20,3 +20,16 @@ Then, activate the envrionment through running
 `conda activate attack_gan_metrics`
 
 # Pixel Attacks on Inception Score
+Pending
+
+# Pixel Attacks on FID
+Pending
+
+# Latent Attacks on FID
+Pending
+
+# Download Pretrained Models
+To access the adversarially trained trained inception models, please download them from:
+https://drive.google.com/file/d/1-AilCTTcnz2iCttHt5MP1N5upZO37VFz/view?usp=sharing
+where the zip file contain three models. `ffhq.pkl` is pretrained GAN on FFHQ that was used in our experiments.
+`kappa_64.pth.tar` and `kappa_128.pth.tar` are adversarially trained InceptionV3 models that are trained with `$\ell_\infty$` PGD adversarial training.
