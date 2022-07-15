@@ -37,7 +37,7 @@ def main(args):
         
         fake_dataset = attacker.run_attack(dataset, real_dataset, args.eps, args.output_path)
     
-    # Evaluating the Inception score
+    # Evaluating the FID
     f = open(args.output_path + '/fid.txt', 'w')
     print("fid\tnum-instances", file=f, flush=True)
     fid = attacker.compute_fid(fake_dataset, real_dataset)
