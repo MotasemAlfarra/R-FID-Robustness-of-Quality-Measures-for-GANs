@@ -20,21 +20,24 @@ def main(args):
     else:
         print("Robust Inception is being used")
         descriminator = robust_inceptionv3(args.robust_inception_path)
-
+    
+    # Putting the generateor and discriminator in one wrapper
     model = GAN_Wrapper(generator, descriminator)
     model.eval().requires_grad_(False)
 
+    # Initializing the attacker
     attacker = attack_gan_fid(model, lr=args.lr, steps=args.iters,
                              batch_size=args.batch_sz, device=device)
     
+    # Loadig the embedding of the real dataset. Computing the embedding should be done in a pre-processing step.
     real_dataset = torch.load(args.real_latents + '/embeddings.pth').to("cpu")
     
     if args.evaluate_path is not None: #Evaluating an existing dataset
         fake_dataset = torch.load(args.evaluate_path + '/embeddings.pth')
-    else:  
+    else:  #Embeddings based on FID-guided sampling.
         fake_dataset = attacker.run_attack(real_dataset, args.eps, args.output_path, args.optimize_w)
     
-    # Evaluating the Inception score
+    # Evaluating the FID
     f = open(args.output_path + '/fid.txt', 'w')
     print("fid\tnum-instances", file=f, flush=True)
     fid_components = attacker.compute_fid(fake_dataset, real_dataset, return_parts=True)
@@ -75,7 +78,7 @@ if __name__=='__main__':
     parser.add_argument('--iters', type=int, default=100,
                     help='number of iterations for the optimization')                
     parser.add_argument('--lr', type=float, default=0.5,
-                    help='number of iterations for the optimization')
+                    help='learning rate for the optimization')
     parser.add_argument('--eps', type=float, default=None,
                     help='radius of lp ball for adversry. Usually it is set to 1.0')
 
