@@ -2,7 +2,6 @@
 import torch
 import torch.nn as nn
 from scipy.linalg import sqrtm
-# sigma3 = torch.from_numpy(sqrtm((sigma1 @ sigma2).cpu().numpy())).real
 import torchvision
 from tqdm import tqdm
 
