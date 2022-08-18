@@ -56,6 +56,17 @@ Please follow the same setup as before, but include the following:
 
 - `--real-dataset-path` path to the real dataset the FID will be computed against
 
+# Computation of R-FID
+To compute the Robust version of FID, noted as R-FID, run the following line
+
+`python main_fid.py`
+
+with passing the following arguments:
+
+- `--real-dataset-path` path to the real dataset the FID will be computed against
+- `--evaluate-path` path to the dataset that needs to be evaluated with R-FID
+- `--robust-inception-path` path to the robustly trained inception model. We provide two robustly trained inception models on ImageNet.
+
 # Latent Attacks on FID
 Pending
 
