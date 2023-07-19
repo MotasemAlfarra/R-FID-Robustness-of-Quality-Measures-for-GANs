@@ -3,8 +3,6 @@ This is the official repo for the ECCV paper: *"On the Robustness of Quality Mea
 
 Preprint available [here](https://arxiv.org/pdf/2201.13019.pdf).
 
-(This repo is still under construction. We are actively updating it.)
-
 ![plot](./pull.png)
 
 If you find our work useful, please cite it appropriately as:
