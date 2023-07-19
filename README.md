@@ -8,11 +8,13 @@ Preprint available [here](https://arxiv.org/pdf/2201.13019.pdf).
 If you find our work useful, please cite it appropriately as:
 
 ```
-@article{alfarra2022robustness,
-  title={On the Robustness of Quality Measures for GANs},
-  author={Alfarra, Motasem and P{\'e}rez, Juan C. and Fr{\"u}hst{\"u}ck, Anna and Torr, Philip HS and Wonka, Peter and Ghanem, Bernard},
-  journal={arXiv preprint arXiv:2201.13019},
-  year={2022}
+@inproceedings{alfarra2022robustness,
+  title={On the robustness of quality measures for gans},
+  author={Alfarra, Motasem and P{\'e}rez, Juan C and Fr{\"u}hst{\"u}ck, Anna and Torr, Philip HS and Wonka, Peter and Ghanem, Bernard},
+  booktitle={European Conference on Computer Vision},
+  pages={18--33},
+  year={2022},
+  organization={Springer}
 }
 ```
 
